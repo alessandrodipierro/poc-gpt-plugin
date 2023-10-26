@@ -1,0 +1,52 @@
+openapi: 3.0.1
+info:
+  title: SIAE Mio Borderò
+  description: Plugin SIAE per la creazione della distinta musicale tramite chat
+  version: 'v1'
+servers:
+  - url: https://gpt-plugin-mb-7805f40f398f.herokuapp.com
+paths:
+  /list:
+    get:
+      operationId: getList
+      summary: Riceve la distinta corrente
+      responses:
+        "200":
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/getListResponse'
+  /add:
+    post:
+      operationId: addItem
+      summary: Aggiunge un elemento alla distinta
+      parameters:
+        - name: item
+          in: query
+          description: Elemento da aggiungere
+          required: true
+          schema:
+            type: string
+      responses:
+        "200":
+          description: OK
+  /delete:
+    delete:
+      operationId: deleteItem
+      summary: Rimuove un elemento dalla distinta
+      parameters:
+        - name: item
+          in: query
+          description: Elemento da rimuovere
+          required: true
+          schema:
+            type: string
+      responses:
+        "200":
+          description: OK
+
+components:
+  schemas:
+    getListResponse:
+      type: string

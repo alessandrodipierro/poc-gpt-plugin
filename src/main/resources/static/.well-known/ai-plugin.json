@@ -1,0 +1,18 @@
+{
+  "schema_version": "v1",
+  "name_for_human": "SIAE Mio Borderò",
+  "name_for_model": "siae_mio_bordero",
+  "description_for_human": "Plugin SIAE per la creazione della distinta musicale tramite chat.",
+  "description_for_model": "Plugin per la creazione della distinta musicale tramite la API di SIAE, con la possibilità di aggiungere e rimuovere brani per calcolare alla fine il costo della licenza e pagarla tramite un link che restituisce l'API.",
+  "auth": {
+    "type": "none"
+  },
+  "api": {
+    "type": "openapi",
+    "url": "https://gpt-plugin-mb-7805f40f398f.herokuapp.com/.well-known/openapi.yaml",
+    "is_user_authenticated": false
+  },
+  "logo_url": "https://gpt-plugin-mb-7805f40f398f.herokuapp.com/.well-known/logo-b.png",
+  "contact_email": "alessandro.dipierro@siae.it",
+  "legal_info_url": "https://www.siae.it/it/privacy/"
+},
